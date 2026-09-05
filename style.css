@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    font-weight: 300;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 50px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 10px 50px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo { color: #fff; font-weight: 700; font-size: 2em; text-decoration: none; }
+header.sticky .logo { color: #111; }
+.logo span { color: red; }
+
+.navbar { display: flex; align-items: center; }
+.navbar li { list-style: none; }
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+header.sticky .navbar li a { color: #111; }
+.navbar a:hover { color: red; border-bottom: 2px solid red; }
+
+.btn-commande {
+    padding: 10px 20px;
+    background: red;
+    color: #fff !important;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+.btn-commande:hover { background: #25D366; transition: 0.3s; }
+
+/* BANNIERE */
+.banniere {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../Poulet/images.jpg) center/cover;
+}
+.banniere .contenu { max-width: 70%; text-align: center; }
+.banniere .contenu h2 { color: lch(96.74% 2.6 298.12); font-size: 3em; margin-bottom: 20px; }
+.banniere .contenu p { color: #fff; font-size: 1.2em; }
+
+.btn1, .btn2 {
+    color: #fff;
+    font-size: 1em;
+    padding: 12px 25px;
+    display: inline-block;
+    margin: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.btn1 { background: red; }
+.btn2 { background: #25D366; }
+.btn1:hover, .btn2:hover { letter-spacing: 4px; }
+
+/* SECTIONS */
+section { padding: 100px 50px; }
+.titre { text-align: center; margin-bottom: 50px; }
+.titre-texte {
+    color: black;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.titre-texte span { color: red; font-size: 1.2em; font-weight: 700; }
+
+/* ROW */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.row .col50 { width: 50%; }
+.row .col50 img {
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* CARTES PRODUITS */
+.card-produit {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.card-produit img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+.card-produit h3 { margin-bottom: 10px; }
+.prix { color: red; font-size: 1.5em; margin: 10px 0; font-weight: 700; }
+.btn-whatsapp { background: #25D366; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 10px; }
+
+/* MENU VARIETES */
+.menu {
+    margin-top: -100px;
+}
+
+.menu .contenu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.menu .contenu .box {
+    width: 350px;
+    margin-top: 20px;
+    border: 20px solid hsl(0, 9%, 91%);
+    box-shadow: 20px 15px 35px rgb(13, 14, 13);
+}
+
+.menu .contenu .box .imbox {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.menu .contenu .box .imbox img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu .contenu .box .text {
+    text-align: center;
+    font-weight: 300;
+    color: #111;
+}
+
+.menu .contenu .box .text h3 {
+    font-weight: 400;
+}
+
+/* CONTACT */
+.contact {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(poules-de-race-elevage-et-vente-ferme-de-beaumont.jpg) center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact .titre-texte, .contact p { color: #fff; }
+.contactform {
+    padding: 50px;
+    background: #fff;
+    box-shadow: 5px 15px 50px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+.contactform input, .contactform textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.contactform input[type="submit"] {
+    background: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.copyright {
+    padding: 20px 40px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+.copyright a { color: red; text-decoration: none; font-weight: 600; }
+
+.menutoggle { display: none; }
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    header, header.sticky { padding: 10px 20px; }
+    section { padding: 80px 20px; }
+    
+    .row { flex-direction: column; text-align: center; }
+    .row .col50 { width: 100%; }
+
+    header .navbar {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(70vh - 70px);
+        background: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+        text-align: center;
+        align-items: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    header .navbar.active { display: flex; }
+    header .navbar li {
+        margin-left: 0;
+        margin-bottom: 20px;}
+    header .navbar li a { color: #111; font-size: 1.6em; font-weight: 300; margin: 15px 0; }
+
+    .menutoggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url(Imagemenu.png) center/30px no-repeat;
+        cursor: pointer;
+    }
+    header.sticky .menutoggle { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23111' viewBox='0 0 24 24'%3E%3Cpath d='M3 6h18M3 12h18M3 18h18'/%3E%3C/svg%3E"); }
+    .menutoggle.active {
+        background-image: url("Imageclose.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banniere .contenu h2 { font-size: 2em; }
+    .contactform { padding: 30px 20px; }
+}
